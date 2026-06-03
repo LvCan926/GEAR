@@ -5,7 +5,7 @@ reinforcement learning. It addresses **False Credit Propagation (FCP)**: a
 criterion can receive credit or incur a penalty even when the prerequisite or
 activation condition that licenses its utility is absent.
 
-[License](LICENSE)
+[Paper](https://arxiv.org/abs/2606.03361) | [License](LICENSE)
 
 <p align="center">
   <img src="figs/Introduction.png" alt="Overview of False Credit Propagation and GEAR" width="900"/>
@@ -75,6 +75,7 @@ verl/utils/reward_score/gear.py        Core GEAR aggregation implementation
 ```
 
 This repository is built on top of
+[RuscaRL](https://github.com/IANNXANG/RuscaRL), which is based on
 [verl](https://github.com/volcengine/verl). The included training scripts are
 configured for Ascend NPUs. The reward aggregation code itself is independent
 of the outer RL algorithm and can be integrated into other rubric-based RL
@@ -289,18 +290,27 @@ higher is better) for flat aggregation, hard gating, and GEAR.
 
 ## Citation
 
-The manuscript is currently an anonymous ACL submission. Please use the
-archival citation after the paper is released:
+If you use GEAR in your work, please cite:
 
 ```bibtex
-@misc{anonymous2026gear,
+@misc{lv2026mitigatingfalsecreditpropagation,
   title={Mitigating False Credit Propagation: Probabilistic Graphical Reward Aggregation for Rubric-Based Reinforcement Learning},
-  author={Anonymous},
+  author={Can Lv and Mingju Chen and Heng Chang and Shiji Zhou},
   year={2026},
-  note={Anonymous ACL submission}
+  eprint={2606.03361},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2606.03361},
 }
 ```
 
 ## License
 
 This repository is released under the [Apache License 2.0](LICENSE).
+
+## Acknowledgments
+
+This codebase is built upon
+[IANNXANG/RuscaRL](https://github.com/IANNXANG/RuscaRL), which is based on
+[verl](https://github.com/volcengine/verl). We thank the authors and
+contributors of these projects for making their work publicly available.
